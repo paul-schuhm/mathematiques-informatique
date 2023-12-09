@@ -17,8 +17,18 @@ Propositions de programmes pour les exercices 4 et 5 (code source en PHP).
 
 - Installer PHP8.0+
 - Installer [Composer](https://getcomposer.org/), le gestionnaire de dépendances de PHP
+- [Cloner le dépôt](https://github.com/paul-schuhm/mathematiques-informatique)
+- Installer les dépendances avec Composer :
+
+~~~bash
+#A la racine du projet
+composer update
+~~~
+
 
 ## Exercice 4 : Programmation de convertisseurs de base
+
+
 
 ### Convertisseur binaire (base 2) vers décimal (base 10)
 
