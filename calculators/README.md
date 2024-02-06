@@ -10,6 +10,7 @@ Propositions de programmes pour les exercices 4 et 5 (code source en PHP).
     - [Convertisseur base a vers base b](#convertisseur-base-a-vers-base-b)
   - [Exercice 5 : Programmation d’une calculatrice binaire](#exercice-5--programmation-dune-calculatrice-binaire)
   - [Exécuter/Modifier les tests](#exécutermodifier-les-tests)
+  - [Exercice 22](#exercice-22)
   - [Ressources](#ressources)
 
 
@@ -100,6 +101,18 @@ Executer la suite de tests
 composer update
 #Executer les tests unitaires
 ./vendor/bin/phpunit tests/TestConverters.php
+~~~
+
+## Exercice 22
+
+[Ce programme](./sets.php) définit un ensemble de fonctions permettant
+d'effectuer du dénombrement sur un ensemble E de cardinal n : p-uplets, permutations,
+arrangements, combinaisons, nombre de parties.
+
+> Note: Les algorithmes pour calculer les combinaisons et arrangements sont basés sur des fonctions récursives et ne sont pas les algorithmes les plus performants ! La méthode suivie est avant tout pédagogique et pour introduire le raisonnement par récursion. [Voir ici des implémentations](https://charlesreid1.github.io/lets-generate-permutations.html) plus performantes et *intelligentes*.
+
+~~~bash
+php sets.php
 ~~~
 
 ## Ressources
