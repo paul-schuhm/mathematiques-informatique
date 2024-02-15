@@ -1,0 +1,50 @@
+#!/usr/bin/php
+<?php
+
+/**
+ * Ce programme généralise les programmes précédents et permet de convertir un nombre entier
+ * naturel depuis une base quelconque vers une autre base quelconque.
+ * Pour cela, on a choisi arbitrairement la base 10 comme base de passage.
+ * Le nombre à convertir est passé de la base d'origine à la base 10,
+ * puis de la base 10 à la base cible.
+ * Améliorer le programme :
+ * - Ce programme est limité aux entiers naturels
+ * - Il n'y a pas de vérification sur les chiffres entre crochets (bien formé)
+ * - La fonction digitsOf() pourrait être plus expressive et refactor
+ */
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Paul\Calculators\BaseToBaseConvertor;
+
+//On définit un gestionnaire d'exception global
+set_exception_handler(function (Throwable $exception) {
+    echo $exception->getMessage() . PHP_EOL;
+});
+
+if (!isset($argv[1])) {
+    //Affiche 'le manuel' du programme si le programme est exécuté sans arguments
+    echo new BaseToBaseConvertor();
+    exit;
+}
+
+//Vérification de la présence des paramètres requis
+$from = str_contains($argv[1], '--from=');
+$to = str_contains($argv[2], '--to=');
+$number = $argv[3];
+
+//On vérifie que tout est bien formé.
+if ($from === false || $to === false || !isset($number)) {
+    //Affiche le manuel
+    echo new BaseToBaseConvertor();
+    exit;
+}
+
+$originBase = substr($argv[1], strpos($argv[1], '=') + 1);
+$targetBase = substr($argv[2], strpos($argv[2], '=') + 1);
+
+$converter = new BaseToBaseConvertor();
+
+echo $converter->convert($originBase, $targetBase, $number) . PHP_EOL;

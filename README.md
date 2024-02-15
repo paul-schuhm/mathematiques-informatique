@@ -5,6 +5,7 @@
   - [Codes et le langage des machines](#codes-et-le-langage-des-machines)
     - [Exercices](#exercices)
     - [Suggestion de correction](#suggestion-de-correction)
+    - [Programme démos](#programme-démos)
   - [Ressources](#ressources)
 
 
@@ -16,7 +17,13 @@
 
 ### Suggestion de correction
 
-[Voir les programmes et le code source de l'exercice 4](./calculators/)
+[Voir les programmes et le code source de l'exercice 4](./sources/)
+
+### Programme démos
+
+- [Voir les programmes](./sources/) pour le changement de base, arithmétique binaire, opérations sur les ensembles et dénombrement, récursion
+- [Voir la démo compilation du C au code machine](./demo1-compilation/)
+- [Voir la démo compilation du C au code machine, la phase de linkage ou comment distribuer des programmes](./demo2-linkage//)
 
 ## Ressources
 

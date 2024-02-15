@@ -1,0 +1,35 @@
+#!/usr/bin/php
+<?php
+/**
+ * Ce programme permet de convertir un nombre décimal (entier naturel) en nombre binaire, 
+ * tous deux représentés par des chaines de caractères.
+ * Approche avec une fonction de conversion procédurale
+ * Voir aussi le programme decimal-to-binary-recursive (approche recursive/fonctionnelle)
+ */
+
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Paul\Calculators\DecimalToBinaryConvertor;
+
+///On définit un gestionnaire d'exception global
+set_exception_handler(function (Throwable $exception) {
+    echo $exception->getMessage() . PHP_EOL;
+    echo "Fin du programme." . PHP_EOL;
+});
+
+
+///On vérifie que le nombre binaire est passé en argument de la commande
+if (!isset($argv[1]))
+    throw new Exception("Vous devez fournir un nombre à convertir en argument du programme");
+
+if (!is_numeric($argv[1])) {
+    throw new Exception("Le nombre est mal formé. Il ne doit contenir que des caractères numériques");
+}
+
+$decimalNumber = intval($argv[1]);
+
+$convertor = new DecimalToBinaryConvertor();
+
+echo $convertor->convertProcedural($decimalNumber) . PHP_EOL;
