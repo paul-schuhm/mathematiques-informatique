@@ -9,7 +9,7 @@
     - [Programme démos](#programme-démos)
   - [Ressources](#ressources)
     - [Livres](#livres)
-    - [Articles](#articles)
+    - [Articles / Sites web](#articles--sites-web)
     - [Vidéos](#vidéos)
 
 
@@ -57,11 +57,11 @@ A l'issue de ce module vous :
 - [Computer Organization and Design Fundamentals](https://faculty.etsu.edu/tarnoff/138292/), David Tarnoff, auto-publié, 2005/2007. Livre complet accessible en ligne, en anglais.
 
 
-### Articles
-
+### Articles / Sites web
 
 - [What Every Programmer Should Know About Memory](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjG7LCvxtqCAxXrTqQEHeE2ArIQFnoECA0QAQ&url=https%3A%2F%2Fpeople.freebsd.org%2F~lstewart%2Farticles%2Fcpumemory.pdf&usg=AOvVaw3VY2lnCBaI-B57Dric65cb&opi=89978449), de Ulrich Drepper (RedHat), publié en novembre 2007
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/), un excellent article de Joel Spolsky (2003) sur l'Unicode, l'encodage UTF-8 et les characters sets
+- [What Every Programmer Should Know About Floating-Point Arithmetic](https://floating-point-gui.de/), excellent site open-source qui fournit de nombreuses réponses (**correctes**) sur les questions liées à l'encodage des nombres rationnels en informatique (nombres à virgule flottante)
 
 ### Vidéos
 
