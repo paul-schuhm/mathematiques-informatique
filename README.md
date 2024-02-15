@@ -2,7 +2,8 @@
 
 
 - [Mathématiques pour l'informatique](#mathématiques-pour-linformatique)
-  - [Codes et le langage des machines](#codes-et-le-langage-des-machines)
+  - [Structures de données - Codes et le langage des machines](#structures-de-données---codes-et-le-langage-des-machines)
+    - [Objectifs](#objectifs)
     - [Exercices](#exercices)
     - [Suggestion de correction](#suggestion-de-correction)
     - [Programme démos](#programme-démos)
@@ -12,7 +13,24 @@
     - [Vidéos](#vidéos)
 
 
-## Codes et le langage des machines
+## Structures de données - Codes et le langage des machines
+
+### Objectifs
+
+Comprendre et résoudre les problèmes mathématiques élémentaires liés à l'encodage de l'information dans les systèmes informatiques.
+
+- Qu'est ce qu'un code et comprendre le code binaire utilisé par le système informatique ou "langage machine"
+- L'encodage et le décodage
+- Les bases de la théorie des ensembles et la logique booléenne ou algèbre de Boole
+- Comment un système informatique exécute des programmes
+
+A l'issue de ce module vous :
+
+- Comprendrez comment l'information est encodée et utilisée sur des cas concrets (entiers, nombres décimaux, texte)
+- Maîtriserez le système binaire et le passage d'un système à l'autre
+- Maîtriserez la logique booléenne
+- Connaîtrez les grands principes du fonctionnement d'un ordinateur (composants logiques)
+
 
 ### Exercices
 
