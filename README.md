@@ -7,6 +7,7 @@
     - [Suggestion de correction](#suggestion-de-correction)
     - [Programme démos](#programme-démos)
   - [Ressources](#ressources)
+  - [Vidéos](#vidéos)
 
 
 ## Codes et le langage des machines
@@ -34,3 +35,8 @@
 - [The Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)](https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/), un excellent article de Joel Spolsky (2003) sur l'Unicode, l'encodage UTF-8 et les characters sets
 - [Computer Organization and Design Fundamentals](https://faculty.etsu.edu/tarnoff/138292/), David Tarnoff 
 - [What Every Programmer Should Know About Memory](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwjG7LCvxtqCAxXrTqQEHeE2ArIQFnoECA0QAQ&url=https%3A%2F%2Fpeople.freebsd.org%2F~lstewart%2Farticles%2Fcpumemory.pdf&usg=AOvVaw3VY2lnCBaI-B57Dric65cb&opi=89978449), de Ulrich Drepper (RedHat), publié en novembre 2007
+
+## Vidéos
+
+- [How Binary Works, and the Power of Abstraction](https://www.youtube.com/watch?v=PMpNhbMjDj0&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=36)
+- [Machine Code Explained - Computerphile](https://www.youtube.com/watch?v=8VsiYWW9r48&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=5)
