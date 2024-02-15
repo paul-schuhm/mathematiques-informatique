@@ -63,5 +63,5 @@ A l'issue de ce module vous :
 
 ### Vidéos
 
-- [How Binary Works, and the Power of Abstraction](https://www.youtube.com/watch?v=PMpNhbMjDj0&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=36)
-- [Machine Code Explained - Computerphile](https://www.youtube.com/watch?v=8VsiYWW9r48&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=5)
+- [How Binary Works, and the Power of Abstraction](https://www.youtube.com/watch?v=PMpNhbMjDj0&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=36), de [Josh's Channel](https://www.youtube.com/@JoshsHandle)
+- [Machine Code Explained - Computerphile](https://www.youtube.com/watch?v=8VsiYWW9r48&list=PLS3XEhTy6-Ale8Et6pxRR2I3LYNt8-rX3&index=5), de [l'excellente (et recommandée !) chaîne Computerphile](https://www.youtube.com/@Computerphile)
