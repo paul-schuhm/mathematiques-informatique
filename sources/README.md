@@ -91,6 +91,8 @@ chmod +x convert
 12
 ./convert --from=10 --to=16 10
 [10]
+./convert --from=10 --to=16 200
+[12]8 #ou C8 ou représentation standard
 ~~~
 
 ## Exercice 5 : Programmation d’une calculatrice binaire
