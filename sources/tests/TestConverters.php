@@ -6,11 +6,8 @@ use Paul\Calculators\BaseToBaseConvertor;
 use Paul\Calculators\BinaryToDecimalConvertor;
 use PHPUnit\Framework\TestCase;
 
-
-
 final class TestConverters extends TestCase
 {
-
     /**
      * Teste le convertisseur BinaryToDecimal
      */
@@ -21,8 +18,6 @@ final class TestConverters extends TestCase
         $this->assertSame($converter->convertToDecimalProcedural('1010'), '10');
         $this->assertSame($converter->convertToDecimalRecursive('11'), '3');
     }
-
-
 
     /**
      * Test le convertisseur général, d'une base quelconque vers une autre
@@ -68,10 +63,11 @@ final class TestConverters extends TestCase
         $this->assertSame($converter->digitsOf('12345'), array('1', '2', '3', '4', '5'));
         $this->assertSame($converter->digitsOf('[10]'), array('10'));
         $this->assertSame($converter->digitsOf('[123456789]'), array('123456789'));
-        $this->assertSame($converter->digitsOf('1[3]'), array('3'));
-        $this->assertSame($converter->digitsOf('1[33]'), array('33'));
-        $this->assertSame($converter->digitsOf('[1]111'), array('1'));
-        $this->assertSame($converter->digitsOf('[12345]111'), array('12345'));
+        $this->assertSame($converter->digitsOf('[3]1'), array('3', '1'));
+        $this->assertSame($converter->digitsOf('1[3]'), array('1', '3'));
+        $this->assertSame($converter->digitsOf('1[33]'), array('1', '33'));
+        $this->assertSame($converter->digitsOf('[1]111'), array('1', '1', '1', '1'));
+        $this->assertSame($converter->digitsOf('[12345]111'), array('12345', '1', '1', '1'));
     }
 
     public function testDigitsOfExceptionMissingClosingBracket(): void

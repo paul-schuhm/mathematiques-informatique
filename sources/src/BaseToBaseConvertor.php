@@ -12,36 +12,31 @@ class BaseToBaseConvertor
      * Par exemple, '10' en base 10 est représenté par '[10]' en base 11 ou supérieure à 10. Cette convention est semblable a choisir une lettre à la place. Il faut donc faire attention que ces chiffres ne soient pas interprétés sur plusieurs positions
      * mais bien sur une seule.
      * @param string Le nombre a découper
-     * @return array Un tableau contenant un chiffre (possiblement sur plusieurs caractères) à chaque position
+     * @return array Un tableau contenant un chiffre (possiblement écrit sur plusieurs caractères) à chaque position
      */
     public function digitsOf(string $number): array
     {
 
-        $posOpeningBracket = strpos($number, '[');
-        $posClosingBracket = strpos($number, ']');
-
-        if ($posOpeningBracket !== false && $posClosingBracket === false) {
-            throw new \Exception(sprintf("Symbole %s mal formé. Il manque un crochet fermant ']'", $number));
+        // Vérifie la cohérence des crochets
+        $openCount = substr_count($number, '[');
+        $closeCount = substr_count($number, ']');
+        if ($openCount !== $closeCount) {
+            throw new \Exception(sprintf("Symbole %s mal formé.", $number));
         }
 
-        if ($posClosingBracket !== false && $posOpeningBracket === false) {
-            throw new \Exception(sprintf("Symbole %s mal formé. Il manque un crochet ouvrant '['", $number));
+        // Extrait tous les chiffres simples ou encadrés en conservant l'ordre
+        if (!preg_match_all('/\[(\d+)\]|(\d)/', $number, $matches, PREG_SET_ORDER)) {
+            throw new \Exception(sprintf("Symbole %s mal formé. Aucun chiffre détecté.", $number));
         }
 
-        $numberIsSymbol = $posClosingBracket !== false && $posOpeningBracket !== false;
-
-        if ($numberIsSymbol) {
-
-            $symbol = substr($number, $posOpeningBracket + 1, $posClosingBracket - $posOpeningBracket - 1);
-
-            if (empty($symbol)) {
-                throw new \Exception(sprintf("Symbole %s mal formé. Le symbole ne peut pas être vide", $number));
+        $digits = [];
+        foreach ($matches as $m) {
+            // $m[1] contient la capture entre crochets si présente, sinon $m[2] contient le chiffre simple
+            if (isset($m[1]) && $m[1] !== '') {
+                $digits[] = $m[1];
+            } else {
+                $digits[] = $m[2];
             }
-
-            $digits = array($symbol);
-        } else {
-
-            $digits =  str_split($number);
         }
 
         return $digits;
@@ -57,14 +52,16 @@ class BaseToBaseConvertor
     public function convertFromBaseToDecimal(string $number, int $originBase): string
     {
         $digits = $this->digitsOf($number);
-
+        $decimalNumber = 0;
         $maxPower = count($digits) - 1;
 
-        $decimalNumber = 0;
-
         foreach ($digits as $position => $digit) {
+            $value = intval($digit);
+            if ($value >= $originBase) {
+                throw new \Exception(sprintf("Le symbole [%s] n'existe pas dans la base %d", $digit, $originBase));
+            }
             $power = $maxPower - $position;
-            $decimalNumber += intval($digit) * pow($originBase, $power);
+            $decimalNumber += $value * ($originBase ** $power);
         }
 
         return strval($decimalNumber);
@@ -79,30 +76,24 @@ class BaseToBaseConvertor
      */
     public function convertFromDecimalTo(int $number, int $targetBase): string
     {
-        //On garde une copie du nombre original à convertir (il est modifié directement dans le do/while)
-        $originalNumber = $number;
-
-        //On utilise ici la méthode d'Euclide pour construire
-        //le nombre à l'envers pas divisions successives par $targetBase
-
-        $targetNumber = '';
-
-        do {
-            $division = intdiv($number, $targetBase);
-            $remainder = $number % $targetBase;
-            $targetNumber = $remainder . $targetNumber;
-            $number = $division;
-        } while ($number !== 0);
-
-        //Si le nombre à convertir est plus petit que la base d'arrivée, on l'écrit entre crochets
-        //pour indiquer que c'est un "chiffre" dans la base cible, qui tient sur une position. 
-        //Par exemple, 15 (base 10) est égal à [15] en base 16 ou supérieure.
-        //On pourrait l'écrire avec un autre caractère, comme une lettre de l'alphabet (comme en hexadecimal).
-        if ($originalNumber < $targetBase && $targetBase > 10) {
-            $targetNumber = sprintf("[%s]", $targetNumber);
+        if ($number === 0) {
+            return "0";
         }
 
-        return $targetNumber;
+        $digits = [];
+
+        do {
+            $remainder = $number % $targetBase;
+            $number = intdiv($number, $targetBase);
+
+            if ($targetBase > 10 && $remainder >= 10) {
+                $digits[] = sprintf("[%d]", $remainder);
+            } else {
+                $digits[] = (string)$remainder;
+            }
+        } while ($number > 0);
+
+        return implode('', array_reverse($digits));
     }
 
     /**
@@ -136,6 +127,6 @@ class BaseToBaseConvertor
      */
     public function __toString(): string
     {
-        return "Convertisseur d'une base à une autre. Usage :\nconvert --from={base de départ} --to={base d'arrivée} {nombre à convertir}.\nPar exemple, convert --from=2 --to=10 1000.\nPour une base supérieure à la base 10, un chiffre est représenté sur deux caractères entre crochets. Par exemple, 10 (base 10) s'écrit [10] en base 11.";
+        return "Convertisseur d'une base à une autre. Usage :\nconvert --from={base de départ} --to={base d'arrivée} {nombre à convertir}.\nPar exemple, convert --from=2 --to=10 10 est égal à 2.\nPour une base supérieure à la base 10, un chiffre est représenté sur deux caractères entre crochets. Par exemple, 10 (base 10) s'écrit '[10]' en base 11. " ;
     }
 }

@@ -70,18 +70,23 @@ chmod +x decimal-to-binary-procedural decimal-to-binary-recursive
 
 Un convertisseur généralisé, permettant de passer d'une base `a` arbitraire à une base `b` arbitraire.
 
-Pour les bases supérieurs à 10, on utilise ici les nombres entre crochets comme symbole d'un chiffre (équivalent à un caractère). Par exemple, 15 (base 10) est égal à `[15]` en base 16 ou supérieure. 10 (base 10) est égal à `[10]` en base 11 ou supérieure. 
+Pour les bases supérieurs à 10, on utilise ici les nombres entre crochets comme symbole d'un chiffre (équivalent à un caractère). Par exemple, `15` (base 10) est égal à `[15]` en base 16 ou supérieure. `10` (base 10) est égal à `[10]` en base 11 ou supérieure. 
 
-- Base hexadécimale (base 16), telle qu'elle est représentée usuellement : `1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, 10`
-- Base hexadécimale (base 16), telle qu'elle est représentée par le système choisi ici : `1, 2, 3, 4, 5, 6, 7, 8, 9, [10], [11], [12], [13], [14], [15], 10`
+- Base hexadécimale (base 16), telle qu'elle est représentée usuellement : `1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, 10` ;
+- Base hexadécimale (base 16), telle qu'elle est représentée par le système choisi ici : `1, 2, 3, 4, 5, 6, 7, 8, 9, [10], [11], [12], [13], [14], [15], 10`.
 
 > Comme nous fabriquons notre propre interpréteur, nous ne sommes pas obligés de représenter les symboles des bases supérieures à 10 comme cela est fait en mémoire par les machines (sur un octet). Nous pouvons fabriquer n'importe quel système arbitraire.
 
+Quelques exemples d'utilisation :
+
 ~~~bash
 chmod +x convert
-#Exemple : convertir 18 (base 18) en base 2
 ./convert --from=18 --to=2 18
 11010
+./convert --from=2 --to=10 111
+7
+./convert --from=10 --to=16 16
+10
 ./convert --from=10 --to=16 18
 12
 ./convert --from=10 --to=16 10
