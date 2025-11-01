@@ -5,7 +5,7 @@
   - [Structures de données - Codes et le langage des machines](#structures-de-données---codes-et-le-langage-des-machines)
     - [Objectifs](#objectifs)
     - [Exercices](#exercices)
-    - [Suggestion de correction](#suggestion-de-correction)
+    - [Suggestions de correction](#suggestions-de-correction)
     - [Programme démos](#programme-démos)
   - [Ressources](#ressources)
     - [Livres](#livres)
@@ -36,9 +36,9 @@ A l'issue de ce module vous :
 
 [Accéder à la fiche d'exercices](./exercices-clean.md)
 
-### Suggestion de correction
+### Suggestions de correction
 
-[Voir les programmes et le code source de l'exercice 4](./sources/)
+[Accéder aux programmes et aux solutions des exercices de programmation](./sources/)
 
 ### Programme démos
 
