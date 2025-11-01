@@ -4,13 +4,14 @@ Propositions de programmes pour les exercices 4 et 5 (code source en PHP).
 
 - [Programmes de calcul sur les changements de base](#programmes-de-calcul-sur-les-changements-de-base)
   - [Prérequis](#prérequis)
-  - [Exercice 4 : Programmation de convertisseurs de base](#exercice-4--programmation-de-convertisseurs-de-base)
-    - [Convertisseur binaire (base 2) vers décimal (base 10)](#convertisseur-binaire-base-2-vers-décimal-base-10)
-    - [Convertisseur décimal (base 10) vers binaire (base 2)](#convertisseur-décimal-base-10-vers-binaire-base-2)
-    - [Convertisseur base a vers base b](#convertisseur-base-a-vers-base-b)
-  - [Exercice 5 : Programmation d’une calculatrice binaire](#exercice-5--programmation-dune-calculatrice-binaire)
+  - [Exercices](#exercices)
+    - [Exercice 4 : Programmation de convertisseurs de base](#exercice-4--programmation-de-convertisseurs-de-base)
+      - [Convertisseur binaire (base 2) vers décimal (base 10)](#convertisseur-binaire-base-2-vers-décimal-base-10)
+      - [Convertisseur décimal (base 10) vers binaire (base 2)](#convertisseur-décimal-base-10-vers-binaire-base-2)
+      - [Convertisseur base a vers base b](#convertisseur-base-a-vers-base-b)
+    - [Exercice 5 : Programmation d’une calculatrice binaire](#exercice-5--programmation-dune-calculatrice-binaire)
+    - [Exercice 22](#exercice-22)
   - [Exécuter/Modifier les tests](#exécutermodifier-les-tests)
-  - [Exercice 22](#exercice-22)
   - [Ressources](#ressources)
 
 
@@ -26,12 +27,11 @@ Propositions de programmes pour les exercices 4 et 5 (code source en PHP).
 composer update
 ~~~
 
+## Exercices
 
-## Exercice 4 : Programmation de convertisseurs de base
+### Exercice 4 : Programmation de convertisseurs de base
 
-
-
-### Convertisseur binaire (base 2) vers décimal (base 10)
+#### Convertisseur binaire (base 2) vers décimal (base 10)
 
 Deux propositions, une procédurale (avec états locaux et boucles), une récursive (avec une fonction récursive)
 
@@ -53,9 +53,9 @@ Ces deux programmes utilisent la classe [`BinaryToDecimalConvertor`](./src/Binar
 
 > Remarque : le coeur des programmes est écrit sous forme de classes pour s'inscrire dans la manière moderne de développer en PHP avec le gestionnaire de paquet Composer. Cette convention est encouragée car elle permet notamment de bénéficier du chargement automatique des classes (*autoloading*). C'est par pure convention et un détail d'implémentation ici, on aurait pu tout laisser dans de simples fonctions, cela n'apporte pas d’intérêt supplémentaire ici.
 
-### Convertisseur décimal (base 10) vers binaire (base 2)
+#### Convertisseur décimal (base 10) vers binaire (base 2)
 
-Deux propositions, une procédurale (avec états locaux et boucles), une récursive (avec une fonction récursive)
+Deux propositions, une *procédurale* (avec états locaux et boucles), une *récursive* (avec une fonction récursive) :
 
 ~~~bash
 #Rendre les scripts executables
@@ -66,9 +66,9 @@ chmod +x decimal-to-binary-procedural decimal-to-binary-recursive
 1000001
 ~~~
 
-### Convertisseur base a vers base b
+#### Convertisseur base a vers base b
 
-Un convertisseur généralisé, permettant de passer d'une base `a` arbitraire à une base `b` arbitraire.
+Un convertisseur généralisé, permettant de passer d'une base arbitraire `a` à une base arbitraire `b`.
 
 Pour les bases supérieurs à 10, on utilise ici les nombres entre crochets comme symbole d'un chiffre (équivalent à un caractère). Par exemple, `15` (base 10) est égal à `[15]` en base 16 ou supérieure. `10` (base 10) est égal à `[10]` en base 11 ou supérieure. 
 
@@ -95,7 +95,22 @@ chmod +x convert
 [12]8 #ou C8 ou représentation standard
 ~~~
 
-## Exercice 5 : Programmation d’une calculatrice binaire
+### Exercice 5 : Programmation d’une calculatrice binaire
+
+> À venir...
+
+### Exercice 22
+
+[Ce programme](./sets.php) définit un ensemble de fonctions permettant
+d'effectuer du dénombrement sur un ensemble E de cardinal n : p-uplets, permutations,
+arrangements, combinaisons, nombre de parties.
+
+> Note: Les algorithmes pour calculer les combinaisons et arrangements sont basés sur des fonctions récursives et ne sont pas les algorithmes les plus performants ! La méthode suivie est avant tout pédagogique et pour introduire le raisonnement par récursion. [Voir ici des implémentations](https://charlesreid1.github.io/lets-generate-permutations.html) plus performantes et *intelligentes*.
+
+~~~bash
+php sets.php
+~~~
+
 
 ## Exécuter/Modifier les tests
 
@@ -108,18 +123,6 @@ Executer la suite de tests
 composer update
 #Executer les tests unitaires
 ./vendor/bin/phpunit tests/TestConverters.php
-~~~
-
-## Exercice 22
-
-[Ce programme](./sets.php) définit un ensemble de fonctions permettant
-d'effectuer du dénombrement sur un ensemble E de cardinal n : p-uplets, permutations,
-arrangements, combinaisons, nombre de parties.
-
-> Note: Les algorithmes pour calculer les combinaisons et arrangements sont basés sur des fonctions récursives et ne sont pas les algorithmes les plus performants ! La méthode suivie est avant tout pédagogique et pour introduire le raisonnement par récursion. [Voir ici des implémentations](https://charlesreid1.github.io/lets-generate-permutations.html) plus performantes et *intelligentes*.
-
-~~~bash
-php sets.php
 ~~~
 
 ## Ressources
