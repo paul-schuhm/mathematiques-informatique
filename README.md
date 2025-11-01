@@ -26,15 +26,15 @@ Comprendre et résoudre les problèmes mathématiques élémentaires liés à l'
 
 A l'issue de ce module vous :
 
-- Comprendrez comment l'information est encodée et utilisée sur des cas concrets (entiers, nombres décimaux, texte)
-- Maîtriserez le système binaire et le passage d'un système à l'autre
-- Maîtriserez la logique booléenne
-- Connaîtrez les grands principes du fonctionnement d'un ordinateur (composants logiques)
+- Comprendrez comment l'information est encodée et utilisée sur des cas concrets (entiers, nombres décimaux, texte) ;
+- Maîtriserez le système binaire et le passage d'un système à l'autre ;
+- Maîtriserez la logique booléenne ;
+- Connaîtrez les grands principes du fonctionnement d'un ordinateur (composants logiques).
 
 
 ### Exercices
 
-[Accéder à la fiche d'exercices (PDF)](./exercices.pdf)
+[Accéder à la fiche d'exercices](./exercices-clean.md)
 
 ### Suggestion de correction
 
@@ -43,8 +43,8 @@ A l'issue de ce module vous :
 ### Programme démos
 
 - [Voir les programmes](./sources/) pour le changement de base, arithmétique binaire, opérations sur les ensembles et dénombrement, récursion
-- [Voir la démo compilation du C au code machine](./demo1-compilation/)
-- [Voir la démo compilation du C au code machine, la phase de linkage ou comment distribuer des programmes](./demo2-linkage//)
+- [Voir la démo compilation du C au code machine](https://github.com/paul-schuhm/dev-natif/tree/main/demos-c/demo-processus-compilation)
+- [Voir la démo compilation du C au code machine, la phase de linkage ou comment distribuer des programmes](https://github.com/paul-schuhm/dev-natif/tree/main/demos-c/demo-linkage)
 
 ## Ressources
 
