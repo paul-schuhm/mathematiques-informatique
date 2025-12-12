@@ -47,7 +47,7 @@ A l'issue de ce module vous :
 
 ### Livres
 
-<img src="assets/code.webp" width="400"><img src="assets/turing.jpg" width="400"><img src="assets/tanenbaum-structuredcomputerorganization.png" width=400>
+<img src="assets/code.webp" width="250"><img src="assets/turing.jpg" width="250"><img src="assets/tanenbaum-structuredcomputerorganization.png" width=250>
 
 - [Code: The Hidden Language of Computer Hardware and Software](https://www.amazon.fr/Code-Language-Computer-Hardware-Software-dp-0137909101/dp/0137909101/ref=dp_ob_title_bk), de Charles Petzold (1ere ou 2nd édition), publiée chez Addison Wesley, 2022. Un *classique* sur le fonctionnement des ordinateurs et l'encodage de l'information. Un must-read
 - [The Annotated Turing: A Guided Tour Through Alan Turing's Historic Paper on Computability and the Turing Machine](https://www.amazon.fr/Annotated-Turing-Turing%E2%80%B2s-Historic-Computability/dp/0470229055), de Charles Petzold, publié chez Wiley, 2008. Un excellent livre qui accompagne le lecteur dans le papier fondateur de Turing de 36 pages sur le fondement de l'informatique. Passionnant  
