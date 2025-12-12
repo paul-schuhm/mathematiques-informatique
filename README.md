@@ -47,14 +47,14 @@ A l'issue de ce module vous :
 
 ### Livres
 
-<img src="assets/code.webp" w=400><img src="assets/turing.jpg" w=400><img src="assets/comet-book.jpeg" w=400><img src="assets/tanenbaum-structuredcomputerorganization.png" w=400>
+<img src="assets/code.webp" width="400"><img src="assets/turing.jpg" width="400"><img src="assets/tanenbaum-structuredcomputerorganization.png" width=400>
 
 - [Code: The Hidden Language of Computer Hardware and Software](https://www.amazon.fr/Code-Language-Computer-Hardware-Software-dp-0137909101/dp/0137909101/ref=dp_ob_title_bk), de Charles Petzold (1ere ou 2nd édition), publiée chez Addison Wesley, 2022. Un *classique* sur le fonctionnement des ordinateurs et l'encodage de l'information. Un must-read
 - [The Annotated Turing: A Guided Tour Through Alan Turing's Historic Paper on Computability and the Turing Machine](https://www.amazon.fr/Annotated-Turing-Turing%E2%80%B2s-Historic-Computability/dp/0470229055), de Charles Petzold, publié chez Wiley, 2008. Un excellent livre qui accompagne le lecteur dans le papier fondateur de Turing de 36 pages sur le fondement de l'informatique. Passionnant  
 - [Rétro-ingénierie pour Débutants, Comprendre le langage d’assemblage](https://beginners.re/), de Dennis Yurichev, traduction du russe en français, publié sous licence Creative Commons, version 2023
 - [Méthodes mathématiques pour l'informatique - 5e édition](https://www.dunod.com/sciences-techniques/methodes-mathematiques-pour-informatique-cours-et-exercices-corriges), Jacques Vélu, Geneviève Avérous, publié chez Dunod, 2019. Ce manuel explique en profondeur tous les thèmes qui constituent le socle des connaissances mathématiques *indispensables* à tout informaticien·e. (Un peu rude mais complet et bien écrit). Avec exercices corrigés.
 - [Computer Organization and Design Fundamentals](https://faculty.etsu.edu/tarnoff/138292/), David Tarnoff, auto-publié, 2005/2007. Livre complet accessible en ligne, en anglais.
-- [**Operating Systems, three easy pieces**](https://pages.cs.wisc.edu/~remzi/OSTEP/), ou le *Comet OS Book*, de Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau (University of Wisconsin-Madison), publié par l'université du Wisconsin, 2008, continuellement mis à jour. [Accessible en ligne](https://pages.cs.wisc.edu/~remzi/OSTEP/). Voir notamment **les chapitres 4 et 5** sur les processus. (**LP++**)
+- [Structured Computer Organization: Sixth Edition](https://www.pearson.fr/fr/book/?GCOI=27440107790060), de  Todd Austin, Andrew Tanenbaum, publié chez Pearson, 2012
 
 ### Articles / Sites web
 
