@@ -28,20 +28,21 @@ foreach($numbers_to_convert as $number){
   //Exercice : restructurer le code ci dessous pour extraire la fonction 'dec2bin(int $input): string' réalisant la conversion
 
   $decimal = $number;
-
   //stocker le résultat de la conversion
   $binary = "";
-
+  //Algorithme 'd'Euclide'
   do{
     $binary .= $decimal % 2 ;
     $decimal = intdiv($decimal, 2);
-
   }while($decimal != 0);
 
-  //Reverse la chaine pour obtenir le nombre en base 2.
-  //Algo : Reverse 'sur place' (en modifiant la chaine existante). Swap symétrique entre deux pointeurs i et j : [i][][][j]  -> [r][i][j][r] -> [r][r][r][r]
+  /*
+  Reverse la chaine pour obtenir le nombre en base 2.
+  Algo : Reverse 'sur place' (en modifiant la chaine existante). Swap symétrique entre deux pointeurs i et j : 
+  [i][][][j] -> [r][i][j][r] -> [r][r][r][r] done
+  [i][immobile][j] -> [r][][r] done
+  */
   $size = strlen($binary);
-  //répeter TAILLE - 1 fois, sinon on fait un tour complet et laisse la chaine inchangée !
   for ($i = 0, $j = $size - 1; $i < $j; $i++, $j--) {
     $tmp = $binary[$i];
     $binary[$i] = $binary[$j];
