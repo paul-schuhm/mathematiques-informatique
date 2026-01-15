@@ -1,14 +1,24 @@
+#!/bin/php
 <?php
+/*
+   Ce programme convertit un nombre binaire passé en argument en base décimale 
+*/
 
-//Ce programme convertit un nombre binaire en base décimale.
+//$argv : tableau fournit au script
+if(!isset($argv[1])){
+	exit("Fournir un nombre à convertir. Usage : php bin2dec.php 1001\n");
+}
 
-//type 'string'
-$input = '100000';
+$input = $argv[1];
+
+//readline() : ouvrir STDIN et attendre saisie d'un input utilisateur (termine avec Entree)
+//$input = readline("Fournir un nombre binaire :");
 
 //str_split(string) : array
 //Valide input (gestion des erreurs) : l'input doit contenir que des 0 ou des 1
 foreach(str_split($input) as $char){
 	if($char != '0' && $char != '1'){
+var_dump($char);
 		//Fonction qui termine le programme (peut afficher un message).
 		//Ecrit sur la sortie standard (STDOUT)
 	        echo "Nombre binaire invalide.";
