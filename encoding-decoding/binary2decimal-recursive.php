@@ -14,7 +14,7 @@ function bin2dec(string $binary, int $position = 0): int{
 
   $decimal = $binary[$position] * pow(2, strlen($binary) - $position - 1 );
 
-  return $decimal + bin2dec(substr($binary, $position + 1));
+  return $decimal + bin2dec($binary, $position + 1);
 }
 
 
