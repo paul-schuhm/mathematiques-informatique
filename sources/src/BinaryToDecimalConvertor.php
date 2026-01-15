@@ -27,7 +27,7 @@ class BinaryToDecimalConvertor
      * @param string $binaryNumber
      * @return string
      */
-    function convertToDecimalProcedural(string $binaryNumber): string
+    public function convertToDecimalProcedural(string $binaryNumber): string
     {
         $maxPowerOfTwo = strlen($binaryNumber) - 1;
 

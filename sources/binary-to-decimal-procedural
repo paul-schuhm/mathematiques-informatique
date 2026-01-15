@@ -3,7 +3,7 @@
 /**
  * Ce programme permet de convertir un nombre binaire en nombre décimal, 
  * tous deux représentés sous forme de chaines de caractères.
- * Approche avec une fonction de conversion procédurale
+ * Approche avec une procédure procédurale (boucles et états locaux)
  */
 
 declare(strict_types=1);
