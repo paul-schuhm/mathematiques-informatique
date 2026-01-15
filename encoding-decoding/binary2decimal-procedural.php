@@ -12,8 +12,8 @@ function bin2dec(string $binary): int{
   //Validation input et gestion des erreurs : Check que des 0 et 1 dans la chaine
   foreach(str_split($binary) as $bit){
     if(!in_array($bit, ['0', '1'])){
-      echo "Error ! Invalid binary number $ans. Please try again !" . PHP_EOL;
-      die;
+      echo "Error ! Invalid binary number $ans. The number should contains only 0 or 1" . PHP_EOL;
+      exit(1);
     }
   }
 
